@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Prelims Mock Test Platform</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- SCREEN 1: HOME / LANDING PAGE               -->
+    <!-- ============================================ -->
+    <div id="screen-home" class="screen active">
+        <header class="home-header">
+            <div class="header-container">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>UPSC Prelims</h1>
+                        <span class="logo-subtitle">Mock Test Platform</span>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button id="btn-history" class="btn btn-outline" title="Attempt History">
+                        <i class="fas fa-history"></i>
+                        <span>History</span>
+                    </button>
+                    <button id="btn-dark-toggle" class="btn btn-icon" title="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="home-main">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-badge">🎯 Real Exam Simulation</div>
+                    <h2 class="hero-title">Master the <span class="text-gradient">UPSC Prelims</span></h2>
+                    <p class="hero-description">Practice with real exam-pattern questions, timed tests, negative marking, and detailed analytics — all in a realistic CBT environment.</p>
+                </div>
+            </section>
+
+            <!-- Candidate Setup -->
+            <section class="setup-section">
+                <div class="setup-card">
+                    <div class="setup-header">
+                        <i class="fas fa-user-circle"></i>
+                        <h3>Start Your Test</h3>
+                    </div>
+                    <div class="setup-body">
+                        <div class="form-group">
+                            <label for="candidate-name">Candidate Name <span class="optional-tag">(Optional)</span></label>
+                            <input type="text" id="candidate-name" placeholder="Enter your name" maxlength="50" autocomplete="off">
+                        </div>
+
+                        <!-- Paper Selection -->
+                        <div class="form-group">
+                            <label>Select Paper</label>
+                            <div class="paper-selection" id="paper-selection">
+                                <div class="paper-card" data-paper="paper1">
+                                    <div class="paper-card-icon">📋</div>
+                                    <div class="paper-card-info">
+                                        <h4>Paper I</h4>
+                                        <p>General Studies</p>
+                                        <span class="paper-meta">200 Marks • 2 Hours</span>
+                                    </div>
+                                    <div class="paper-check"><i class="fas fa-check-circle"></i></div>
+                                </div>
+                                <div class="paper-card" data-paper="paper2">
+                                    <div class="paper-card-icon">📝</div>
+                                    <div class="paper-card-info">
+                                        <h4>Paper II</h4>
+                                        <p>CSAT</p>
+                                        <span class="paper-meta">200 Marks • 2 Hours</span>
+                                    </div>
+                                    <div class="paper-check"><i class="fas fa-check-circle"></i></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mode Selection -->
+                        <div class="form-group" id="mode-selection-group" style="display:none;">
+                            <label>Select Mode</label>
+                            <div class="mode-selection" id="mode-selection">
+                                <div class="mode-card" data-mode="full">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Full-Length Mock</span>
+                                </div>
+                                <div class="mode-card" data-mode="subject">
+                                    <i class="fas fa-book-open"></i>
+                                    <span>Subject-wise Test</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Subject Selection (shown dynamically) -->
+                        <div class="form-group" id="subject-selection-group" style="display:none;">
+                            <label>Select Subject</label>
+                            <div class="subject-grid" id="subject-grid">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Test Summary -->
+                        <div class="test-summary" id="test-summary" style="display:none;">
+                            <div class="summary-header">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Test Details</span>
+                            </div>
+                            <div class="summary-details">
+                                <div class="summary-item">
+                                    <span class="summary-label">Test</span>
+                                    <span class="summary-value" id="summary-test-name">—</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Questions</span>
+                                    <span class="summary-value" id="summary-questions">—</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Duration</span>
+                                    <span class="summary-value" id="summary-duration">—</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Marks</span>
+                                    <span class="summary-value" id="summary-marks">—</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Negative Marking</span>
+                                    <span class="summary-value" id="summary-negative">—</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Options -->
+                        <div class="test-options" id="test-options" style="display:none;">
+                            <div class="option-toggle">
+                                <label class="toggle-label">
+                                    <input type="checkbox" id="opt-shuffle-questions">
+                                    <span class="toggle-switch"></span>
+                                    <span>Shuffle Questions</span>
+                                </label>
+                            </div>
+                            <div class="option-toggle">
+                                <label class="toggle-label">
+                                    <input type="checkbox" id="opt-shuffle-options">
+                                    <span class="toggle-switch"></span>
+                                    <span>Shuffle Options</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Start Button -->
+                        <button id="btn-start-test" class="btn btn-primary btn-lg" disabled>
+                            <i class="fas fa-play-circle"></i>
+                            <span>Start Test</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resume Test Banner (shown when there's an active session) -->
+            <div class="resume-banner" id="resume-banner" style="display:none;">
+                <div class="resume-content">
+                    <div class="resume-info">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h4>Test In Progress</h4>
+                            <p id="resume-test-info">You have an unfinished test.</p>
+                        </div>
+                    </div>
+                    <div class="resume-actions">
+                        <button id="btn-resume-test" class="btn btn-warning">
+                            <i class="fas fa-redo"></i> Resume Test
+                        </button>
+                        <button id="btn-discard-test" class="btn btn-outline-danger btn-sm">
+                            <i class="fas fa-trash"></i> Discard
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="home-footer">
+            <p>UPSC Prelims Mock Test Platform &copy; 2026 | For Practice Only</p>
+        </footer>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SCREEN 2: EXAM INTERFACE                    -->
+    <!-- ============================================ -->
+    <div id="screen-exam" class="screen">
+        <!-- Exam Header -->
+        <header class="exam-header">
+            <div class="exam-header-left">
+                <div class="exam-logo">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <div class="exam-info">
+                    <h2 id="exam-test-name">Full-Length Mock Test</h2>
+                    <span id="exam-paper-name" class="exam-paper-badge">Paper I - General Studies</span>
+                </div>
+            </div>
+            <div class="exam-header-center">
+                <div class="candidate-info">
+                    <i class="fas fa-user"></i>
+                    <span id="exam-candidate-name">Candidate</span>
+                </div>
+            </div>
+            <div class="exam-header-right">
+                <div class="timer-container" id="timer-container">
+                    <i class="fas fa-clock"></i>
+                    <span id="timer-display" class="timer-display">02:00:00</span>
+                </div>
+                <button id="btn-submit-test" class="btn btn-danger btn-submit">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Submit</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Exam Body -->
+        <div class="exam-body">
+            <!-- Left Panel: Question Area -->
+            <div class="question-panel">
+                <!-- Question Header -->
+                <div class="question-header">
+                    <div class="question-number">
+                        <span>Question</span>
+                        <strong id="current-q-number">1</strong>
+                        <span>of</span>
+                        <strong id="total-q-count">100</strong>
+                    </div>
+                    <div class="question-meta">
+                        <span class="q-topic-badge" id="q-topic-badge">Topic</span>
+                        <span class="q-difficulty-badge" id="q-difficulty-badge">Medium</span>
+                    </div>
+                </div>
+
+                <!-- Question Content -->
+                <div class="question-content" id="question-content">
+                    <div class="question-text" id="question-text">
+                        Loading question...
+                    </div>
+                    <div class="options-container" id="options-container">
+                        <label class="option-label" data-option="A">
+                            <input type="radio" name="answer" value="A">
+                            <span class="option-marker">A</span>
+                            <span class="option-text" id="option-a-text">Option A</span>
+                        </label>
+                        <label class="option-label" data-option="B">
+                            <input type="radio" name="answer" value="B">
+                            <span class="option-marker">B</span>
+                            <span class="option-text" id="option-b-text">Option B</span>
+                        </label>
+                        <label class="option-label" data-option="C">
+                            <input type="radio" name="answer" value="C">
+                            <span class="option-marker">C</span>
+                            <span class="option-text" id="option-c-text">Option C</span>
+                        </label>
+                        <label class="option-label" data-option="D">
+                            <input type="radio" name="answer" value="D">
+                            <span class="option-marker">D</span>
+                            <span class="option-text" id="option-d-text">Option D</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question Actions -->
+                <div class="question-actions">
+                    <div class="actions-left">
+                        <label class="mark-review-label" id="mark-review-label">
+                            <input type="checkbox" id="chk-mark-review">
+                            <span class="mark-review-icon"><i class="fas fa-bookmark"></i></span>
+                            <span>Mark for Review</span>
+                        </label>
+                        <button id="btn-clear-response" class="btn btn-outline-secondary">
+                            <i class="fas fa-eraser"></i> Clear Response
+                        </button>
+                    </div>
+                    <div class="actions-right">
+                        <button id="btn-prev-question" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button id="btn-save-next" class="btn btn-primary">
+                            Save & Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Navigation Grid -->
+            <div class="navigation-panel" id="navigation-panel">
+                <div class="nav-panel-header">
+                    <h3><i class="fas fa-th"></i> Question Palette</h3>
+                    <button id="btn-toggle-nav" class="btn btn-icon btn-sm nav-toggle-mobile">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Legend -->
+                <div class="nav-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot legend-not-visited"></span>
+                        <span>Not Visited</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot legend-not-answered"></span>
+                        <span>Not Answered</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot legend-answered"></span>
+                        <span>Answered</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot legend-marked"></span>
+                        <span>Marked for Review</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot legend-answered-marked"></span>
+                        <span>Answered & Marked</span>
+                    </div>
+                </div>
+
+                <!-- Question Grid -->
+                <div class="question-grid" id="question-grid">
+                    <!-- Dynamically populated -->
+                </div>
+
+                <!-- Stats Summary -->
+                <div class="nav-stats">
+                    <div class="stat-row">
+                        <span>Answered</span>
+                        <strong id="stat-answered">0</strong>
+                    </div>
+                    <div class="stat-row">
+                        <span>Not Answered</span>
+                        <strong id="stat-not-answered">0</strong>
+                    </div>
+                    <div class="stat-row">
+                        <span>Marked for Review</span>
+                        <strong id="stat-marked">0</strong>
+                    </div>
+                    <div class="stat-row">
+                        <span>Not Visited</span>
+                        <strong id="stat-not-visited">0</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button id="btn-mobile-nav-toggle" class="mobile-nav-toggle">
+            <i class="fas fa-th"></i>
+            <span class="mobile-nav-badge" id="mobile-nav-badge">0</span>
+        </button>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SCREEN 3: RESULT PAGE                       -->
+    <!-- ============================================ -->
+    <div id="screen-result" class="screen">
+        <header class="result-header">
+            <div class="header-container">
+                <div class="logo-section">
+                    <div class="logo-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="logo-text">
+                        <h1>Test Results</h1>
+                        <span class="logo-subtitle" id="result-test-name">Full-Length Mock Test</span>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button id="btn-review-answers" class="btn btn-outline">
+                        <i class="fas fa-search"></i> Review Answers
+                    </button>
+                    <button id="btn-back-home" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Home
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="result-main">
+            <!-- Score Card -->
+            <section class="score-card-section">
+                <div class="score-card">
+                    <div class="score-circle-container">
+                        <div class="score-circle" id="score-circle">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="score-bg" cx="60" cy="60" r="52"/>
+                                <circle class="score-progress" id="score-progress" cx="60" cy="60" r="52" 
+                                    stroke-dasharray="326.73" stroke-dashoffset="326.73"/>
+                            </svg>
+                            <div class="score-text">
+                                <span class="score-value" id="score-value">0</span>
+                                <span class="score-total" id="score-total">/ 200</span>
+                            </div>
+                        </div>
+                        <p class="score-label">Your Score</p>
+                    </div>
+
+                    <div class="score-details">
+                        <div class="detail-grid">
+                            <div class="detail-card">
+                                <div class="detail-icon"><i class="fas fa-list-ol"></i></div>
+                                <div class="detail-info">
+                                    <span class="detail-value" id="result-total-q">0</span>
+                                    <span class="detail-label">Total Questions</span>
+                                </div>
+                            </div>
+                            <div class="detail-card">
+                                <div class="detail-icon attempted"><i class="fas fa-pen"></i></div>
+                                <div class="detail-info">
+                                    <span class="detail-value" id="result-attempted">0</span>
+                                    <span class="detail-label">Attempted</span>
+                                </div>
+                            </div>
+                            <div class="detail-card">
+                                <div class="detail-icon correct"><i class="fas fa-check"></i></div>
+                                <div class="detail-info">
+                                    <span class="detail-value" id="result-correct">0</span>
+                                    <span class="detail-label">Correct</span>
+                                </div>
+                            </div>
+                            <div class="detail-card">
+                                <div class="detail-icon incorrect"><i class="fas fa-times"></i></div>
+                                <div class="detail-info">
+                                    <span class="detail-value" id="result-incorrect">0</span>
+                                    <span class="detail-label">Incorrect</span>
+                                </div>
+                            </div>
+                            <div class="detail-card">
+                                <div class="detail-icon accuracy"><i class="fas fa-bullseye"></i></div>
+                                <div class="detail-info">
+                                    <span class="detail-value" id="result-accuracy">0%</span>
+                                    <span class="detail-label">Accuracy</span>
+                                </div>
+                            </div>
+                            <div class="detail-card">
+                                <div class="detail-icon time"><i class="fas fa-stopwatch"></i></div>
+                                <div class="detail-info">
+                                    <span class="detail-value" id="result-time-taken">00:00</span>
+                                    <span class="detail-label">Time Taken</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Topic-wise Breakdown -->
+            <section class="topic-breakdown-section">
+                <h3><i class="fas fa-chart-bar"></i> Topic-wise Performance</h3>
+                <div class="topic-table-container">
+                    <table class="topic-table" id="topic-table">
+                        <thead>
+                            <tr>
+                                <th>Topic</th>
+                                <th>Total</th>
+                                <th>Attempted</th>
+                                <th>Correct</th>
+                                <th>Incorrect</th>
+                                <th>Score</th>
+                                <th>Accuracy</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topic-table-body">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SCREEN 4: REVIEW MODE                       -->
+    <!-- ============================================ -->
+    <div id="screen-review" class="screen">
+        <header class="review-header">
+            <div class="header-container">
+                <div class="logo-section">
+                    <div class="logo-icon"><i class="fas fa-search"></i></div>
+                    <div class="logo-text">
+                        <h1>Answer Review</h1>
+                        <span class="logo-subtitle" id="review-test-name">Review Mode</span>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <div class="review-filter-group">
+                        <button class="btn btn-sm review-filter active" data-filter="all">All</button>
+                        <button class="btn btn-sm review-filter" data-filter="correct">
+                            <i class="fas fa-check"></i> Correct
+                        </button>
+                        <button class="btn btn-sm review-filter" data-filter="incorrect">
+                            <i class="fas fa-times"></i> Incorrect
+                        </button>
+                        <button class="btn btn-sm review-filter" data-filter="unattempted">
+                            <i class="fas fa-minus"></i> Skipped
+                        </button>
+                    </div>
+                    <button id="btn-back-result" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Back to Results
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="review-main">
+            <div class="review-container" id="review-container">
+                <!-- Populated dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SCREEN 5: ATTEMPT HISTORY                   -->
+    <!-- ============================================ -->
+    <div id="screen-history" class="screen">
+        <header class="history-header">
+            <div class="header-container">
+                <div class="logo-section">
+                    <div class="logo-icon"><i class="fas fa-history"></i></div>
+                    <div class="logo-text">
+                        <h1>Attempt History</h1>
+                        <span class="logo-subtitle">Your past test results</span>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button id="btn-clear-history" class="btn btn-outline-danger">
+                        <i class="fas fa-trash"></i> Clear All
+                    </button>
+                    <button id="btn-history-home" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Home
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="history-main">
+            <div class="history-list" id="history-list">
+                <!-- Populated dynamically -->
+            </div>
+            <div class="history-empty" id="history-empty" style="display:none;">
+                <i class="fas fa-inbox"></i>
+                <h3>No Attempts Yet</h3>
+                <p>Complete a test to see your results here.</p>
+                <button class="btn btn-primary" id="btn-history-start">
+                    <i class="fas fa-play"></i> Take a Test
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MODAL: Submit Confirmation                  -->
+    <!-- ============================================ -->
+    <div class="modal-overlay" id="modal-submit" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-exclamation-triangle"></i> Submit Confirmation</h3>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to submit the test?</p>
+                <div class="modal-stats">
+                    <div class="modal-stat">
+                        <span class="modal-stat-value" id="modal-answered">0</span>
+                        <span class="modal-stat-label">Answered</span>
+                    </div>
+                    <div class="modal-stat">
+                        <span class="modal-stat-value" id="modal-unanswered">0</span>
+                        <span class="modal-stat-label">Unanswered</span>
+                    </div>
+                    <div class="modal-stat">
+                        <span class="modal-stat-value" id="modal-marked">0</span>
+                        <span class="modal-stat-label">Marked</span>
+                    </div>
+                </div>
+                <p class="modal-warning">⚠️ You cannot change answers after submission.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btn-cancel-submit" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Go Back
+                </button>
+                <button id="btn-confirm-submit" class="btn btn-danger">
+                    <i class="fas fa-paper-plane"></i> Confirm Submit
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Time Up -->
+    <div class="modal-overlay" id="modal-timeup" style="display:none;">
+        <div class="modal-content modal-timeup">
+            <div class="modal-header">
+                <h3><i class="fas fa-clock"></i> Time's Up!</h3>
+            </div>
+            <div class="modal-body">
+                <div class="timeup-icon">⏰</div>
+                <p>The allotted time for this test has ended.</p>
+                <p>Your answers have been automatically submitted.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btn-timeup-ok" class="btn btn-primary btn-lg">
+                    <i class="fas fa-chart-bar"></i> View Results
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Discard Confirmation -->
+    <div class="modal-overlay" id="modal-discard" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-trash-alt"></i> Discard Test</h3>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to discard the ongoing test? All progress will be lost.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btn-cancel-discard" class="btn btn-secondary">Cancel</button>
+                <button id="btn-confirm-discard" class="btn btn-danger">Discard Test</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay" style="display:none;">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading Test...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="js/storageManager.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/testEngine.js"></script>
+    <script src="js/resultEngine.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

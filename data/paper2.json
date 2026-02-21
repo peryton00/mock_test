@@ -1,0 +1,460 @@
+{
+  "paperInfo": {
+    "paperId": "paper2",
+    "paperName": "CSAT Paper II",
+    "paperCode": "CSAT",
+    "totalQuestions": 80,
+    "durationMinutes": 120,
+    "marksPerQuestion": 2.5,
+    "negativeMarkingRatio": 0.33,
+    "maxMarks": 200,
+    "qualifyingMarks": 66
+  },
+  "subjects": [
+    {
+      "subjectId": "comprehension",
+      "subjectName": "Reading Comprehension",
+      "icon": "📖",
+      "questionCount": 5
+    },
+    {
+      "subjectId": "logical",
+      "subjectName": "Logical Reasoning & Analytical Ability",
+      "icon": "🧩",
+      "questionCount": 5
+    },
+    {
+      "subjectId": "quantitative",
+      "subjectName": "Basic Numeracy & Data Interpretation",
+      "icon": "📊",
+      "questionCount": 5
+    },
+    {
+      "subjectId": "decision",
+      "subjectName": "Decision Making & Problem Solving",
+      "icon": "🎯",
+      "questionCount": 5
+    },
+    {
+      "subjectId": "english",
+      "subjectName": "English Language Comprehension",
+      "icon": "🔤",
+      "questionCount": 5
+    }
+  ],
+  "tests": {
+    "full": {
+      "testId": "CSAT_FULL_001",
+      "testName": "Full-Length Mock Test - Paper 2 (CSAT)",
+      "durationMinutes": 120,
+      "questionIds": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+    },
+    "comprehension": {
+      "testId": "CSAT_COMP_001",
+      "testName": "Subject Test - Reading Comprehension",
+      "durationMinutes": 20,
+      "questionIds": [1,2,3,4,5]
+    },
+    "logical": {
+      "testId": "CSAT_LOG_001",
+      "testName": "Subject Test - Logical Reasoning",
+      "durationMinutes": 20,
+      "questionIds": [6,7,8,9,10]
+    },
+    "quantitative": {
+      "testId": "CSAT_QUANT_001",
+      "testName": "Subject Test - Basic Numeracy",
+      "durationMinutes": 20,
+      "questionIds": [11,12,13,14,15]
+    },
+    "decision": {
+      "testId": "CSAT_DEC_001",
+      "testName": "Subject Test - Decision Making",
+      "durationMinutes": 20,
+      "questionIds": [16,17,18,19,20]
+    },
+    "english": {
+      "testId": "CSAT_ENG_001",
+      "testName": "Subject Test - English Comprehension",
+      "durationMinutes": 20,
+      "questionIds": [21,22,23,24,25]
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "Read the following passage and answer:\n\n\"Democracy is not merely a form of government. It is primarily a mode of associated living. The roots of democracy are to be found in the social relationship, in the terms of the associated life between the people who form the society.\"\n\nWhat is the central idea of this passage?",
+      "options": {
+        "A": "Democracy is just about elections and voting",
+        "B": "Democracy is fundamentally about social relationships and community living",
+        "C": "Democracy has no connection with society",
+        "D": "Democracy is a purely political concept"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage emphasizes that democracy goes beyond being just a government form — it is about how people live together in a society. The 'roots of democracy' lie in social relationships and associated life between people.",
+      "topic": "Reading Comprehension",
+      "subject": "comprehension",
+      "difficulty": "medium"
+    },
+    {
+      "id": 2,
+      "question": "Read the passage:\n\n\"Education is the most powerful weapon which you can use to change the world. It is the key to eliminating gender inequality, to reducing poverty, to creating a sustainable planet, to preventing needless deaths and illness.\"\n\nAccording to the passage, education can help in all of the following EXCEPT:",
+      "options": {
+        "A": "Reducing poverty",
+        "B": "Eliminating gender inequality",
+        "C": "Maximizing industrial production",
+        "D": "Creating a sustainable planet"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage mentions education helping with gender inequality, poverty reduction, sustainability, and preventing illness. Maximizing industrial production is NOT mentioned in the passage. The question tests careful reading comprehension.",
+      "topic": "Reading Comprehension",
+      "subject": "comprehension",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "question": "A passage states: \"All progress depends on the unreasonable man. The reasonable man adapts to the world; the unreasonable one persists in adapting the world to himself.\"\n\nWhat inference can be drawn?",
+      "options": {
+        "A": "Unreasonable people are always problematic",
+        "B": "Innovation comes from those who challenge the status quo",
+        "C": "Reasonable people drive all progress",
+        "D": "Adaptation is unnecessary"
+      },
+      "correctAnswer": "B",
+      "explanation": "The passage by George Bernard Shaw suggests that progress comes from those who refuse to accept things as they are (the 'unreasonable' ones) and instead try to change the world. This is about innovation and challenging the status quo.",
+      "topic": "Reading Comprehension",
+      "subject": "comprehension",
+      "difficulty": "medium"
+    },
+    {
+      "id": 4,
+      "question": "Consider the passage:\n\n\"Climate change is no longer a distant threat. Rising sea levels threaten coastal communities. Extreme weather events are becoming more frequent. Agricultural patterns are shifting, affecting food security worldwide.\"\n\nThe tone of the passage can best be described as:",
+      "options": {
+        "A": "Optimistic and hopeful",
+        "B": "Neutral and indifferent",
+        "C": "Urgent and concerned",
+        "D": "Humorous and light"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage uses phrases like 'no longer a distant threat', 'threaten', 'more frequent', and 'affecting food security' — all indicating urgency and concern about climate change impacts. The tone is clearly alarming and calls for attention.",
+      "topic": "Reading Comprehension",
+      "subject": "comprehension",
+      "difficulty": "easy"
+    },
+    {
+      "id": 5,
+      "question": "From the passage: \"The Indian Constitution guarantees six fundamental rights to all citizens. These rights are justiciable, meaning they can be enforced by courts. However, these rights are not absolute and come with reasonable restrictions.\"\n\nWhich statement is TRUE based on the passage?",
+      "options": {
+        "A": "Fundamental rights are absolute with no restrictions",
+        "B": "Fundamental rights cannot be enforced by courts",
+        "C": "There are six fundamental rights that can be enforced by courts but have limitations",
+        "D": "Only some citizens have fundamental rights"
+      },
+      "correctAnswer": "C",
+      "explanation": "The passage clearly states three key facts: there are six fundamental rights, they are justiciable (enforceable by courts), and they are not absolute (have reasonable restrictions). Option C correctly captures all three elements.",
+      "topic": "Reading Comprehension",
+      "subject": "comprehension",
+      "difficulty": "easy"
+    },
+    {
+      "id": 6,
+      "question": "In a certain code language, 'COMPUTER' is written as 'DPNQVUFS'. How is 'PROGRAM' written in that code?",
+      "options": {
+        "A": "QSPHSBN",
+        "B": "QSPHSBO",
+        "C": "RSQITCP",
+        "D": "QSPHSBN"
+      },
+      "correctAnswer": "A",
+      "explanation": "Each letter in the original word is replaced by the next letter in the alphabet: C→D, O→P, M→N, P→Q, U→V, T→U, E→F, R→S. Applying the same rule to PROGRAM: P→Q, R→S, O→P, G→H, R→S, A→B, M→N = QSPHSBN.",
+      "topic": "Logical Reasoning",
+      "subject": "logical",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "question": "If all roses are flowers, all flowers are beautiful, and some beautiful things are expensive, which of the following is definitely true?",
+      "options": {
+        "A": "All roses are expensive",
+        "B": "All roses are beautiful",
+        "C": "Some expensive things are roses",
+        "D": "All beautiful things are roses"
+      },
+      "correctAnswer": "B",
+      "explanation": "Using syllogistic logic: All roses are flowers (given), and all flowers are beautiful (given). Therefore, all roses are beautiful (definite conclusion). The connection to 'expensive' is only 'some', so we cannot definitively say roses are expensive.",
+      "topic": "Logical Reasoning",
+      "subject": "logical",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "question": "Complete the series: 2, 6, 12, 20, 30, ?",
+      "options": {
+        "A": "40",
+        "B": "42",
+        "C": "44",
+        "D": "46"
+      },
+      "correctAnswer": "B",
+      "explanation": "The differences between consecutive terms are: 4, 6, 8, 10, ... (increasing by 2 each time). So the next difference is 12, and 30 + 12 = 42. Alternatively, the pattern is n(n+1): 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42.",
+      "topic": "Logical Reasoning",
+      "subject": "logical",
+      "difficulty": "easy"
+    },
+    {
+      "id": 9,
+      "question": "A is the father of B. B is the sister of C. D is the brother of A. What is D to C?",
+      "options": {
+        "A": "Father",
+        "B": "Uncle",
+        "C": "Grandfather",
+        "D": "Brother"
+      },
+      "correctAnswer": "B",
+      "explanation": "A is the father of B and C (since B is C's sister, they share the same father A). D is A's brother. Therefore, D is the uncle of both B and C. D is A's sibling, making D the paternal uncle of C.",
+      "topic": "Logical Reasoning",
+      "subject": "logical",
+      "difficulty": "easy"
+    },
+    {
+      "id": 10,
+      "question": "Statement: All managers are leaders. Some leaders are visionaries.\nConclusions:\nI. Some managers are visionaries.\nII. Some visionaries are leaders.\n\nWhich conclusion(s) follow(s)?",
+      "options": {
+        "A": "Only I follows",
+        "B": "Only II follows",
+        "C": "Both I and II follow",
+        "D": "Neither I nor II follows"
+      },
+      "correctAnswer": "B",
+      "explanation": "From 'Some leaders are visionaries', we can directly conclude 'Some visionaries are leaders' (by conversion). However, since only 'some' leaders are visionaries and all managers are leaders, we cannot definitely conclude that some managers are visionaries — they might be among the non-visionary leaders.",
+      "topic": "Logical Reasoning",
+      "subject": "logical",
+      "difficulty": "hard"
+    },
+    {
+      "id": 11,
+      "question": "If a train travels 360 km in 4 hours, what is its speed in meters per second?",
+      "options": {
+        "A": "20 m/s",
+        "B": "25 m/s",
+        "C": "30 m/s",
+        "D": "90 m/s"
+      },
+      "correctAnswer": "B",
+      "explanation": "Speed = Distance/Time = 360 km/4 hours = 90 km/h. To convert km/h to m/s, multiply by 5/18: 90 × 5/18 = 25 m/s. The conversion factor 5/18 comes from: 1 km = 1000 m and 1 hour = 3600 seconds.",
+      "topic": "Basic Numeracy",
+      "subject": "quantitative",
+      "difficulty": "easy"
+    },
+    {
+      "id": 12,
+      "question": "A shopkeeper sells an article at 20% profit. If the cost price is ₹500, what is the selling price?",
+      "options": {
+        "A": "₹550",
+        "B": "₹580",
+        "C": "₹600",
+        "D": "₹620"
+      },
+      "correctAnswer": "C",
+      "explanation": "Selling Price = Cost Price + Profit. Profit = 20% of ₹500 = ₹100. Therefore, Selling Price = ₹500 + ₹100 = ₹600. Alternatively: SP = CP × (1 + Profit%/100) = 500 × 1.20 = ₹600.",
+      "topic": "Basic Numeracy",
+      "subject": "quantitative",
+      "difficulty": "easy"
+    },
+    {
+      "id": 13,
+      "question": "The average of five numbers is 30. If one number is excluded, the average becomes 28. What is the excluded number?",
+      "options": {
+        "A": "34",
+        "B": "36",
+        "C": "38",
+        "D": "40"
+      },
+      "correctAnswer": "C",
+      "explanation": "Sum of 5 numbers = 5 × 30 = 150. Sum of 4 remaining numbers = 4 × 28 = 112. Excluded number = 150 - 112 = 38. This is a standard average problem where we use the relationship: Sum = Average × Count.",
+      "topic": "Basic Numeracy",
+      "subject": "quantitative",
+      "difficulty": "medium"
+    },
+    {
+      "id": 14,
+      "question": "A pie chart shows the budget allocation: Education 25%, Health 20%, Defense 30%, Agriculture 15%, Others 10%. If the total budget is ₹10,000 crore, how much is spent on Education and Health combined?",
+      "options": {
+        "A": "₹3,500 crore",
+        "B": "₹4,000 crore",
+        "C": "₹4,500 crore",
+        "D": "₹5,000 crore"
+      },
+      "correctAnswer": "C",
+      "explanation": "Education + Health = 25% + 20% = 45%. Amount = 45% of ₹10,000 crore = ₹4,500 crore. This is a straightforward data interpretation problem requiring addition of percentages and application to the total.",
+      "topic": "Data Interpretation",
+      "subject": "quantitative",
+      "difficulty": "easy"
+    },
+    {
+      "id": 15,
+      "question": "Two pipes A and B can fill a tank in 12 hours and 18 hours respectively. If both are opened together, how long will it take to fill the tank?",
+      "options": {
+        "A": "6 hours",
+        "B": "7.2 hours",
+        "C": "8 hours",
+        "D": "9 hours"
+      },
+      "correctAnswer": "B",
+      "explanation": "Rate of pipe A = 1/12 tank/hour. Rate of pipe B = 1/18 tank/hour. Combined rate = 1/12 + 1/18 = 3/36 + 2/36 = 5/36 tank/hour. Time = 1 ÷ (5/36) = 36/5 = 7.2 hours.",
+      "topic": "Basic Numeracy",
+      "subject": "quantitative",
+      "difficulty": "medium"
+    },
+    {
+      "id": 16,
+      "question": "A government officer needs to allocate a limited budget among three projects: rural road construction, school renovation, and hospital equipment. The road project benefits the maximum number of people but costs the most. The school project is cheapest but has medium impact. What should be the officer's priority?",
+      "options": {
+        "A": "Allocate entire budget to road construction for maximum reach",
+        "B": "Distribute equally among all three regardless of impact",
+        "C": "Prioritize based on cost-benefit analysis and allocate proportionally",
+        "D": "Choose only the cheapest option to save money"
+      },
+      "correctAnswer": "C",
+      "explanation": "A good decision-maker should use cost-benefit analysis to allocate resources proportionally. This ensures maximum utility while considering both impact and budget constraints. Equal distribution ignores varying needs, and single-project allocation ignores other critical areas.",
+      "topic": "Decision Making",
+      "subject": "decision",
+      "difficulty": "medium"
+    },
+    {
+      "id": 17,
+      "question": "You are a district collector. During floods, you have limited rescue boats. Group A (50 people) is in moderate danger but accessible. Group B (20 people) is in severe danger but in a remote area. What would be the most appropriate decision?",
+      "options": {
+        "A": "Rescue Group A first as more people are involved",
+        "B": "Rescue Group B first as they face severe danger",
+        "C": "Wait for more resources before acting",
+        "D": "Let local volunteers handle it"
+      },
+      "correctAnswer": "B",
+      "explanation": "In emergency management, severity of danger takes priority over numbers when triage decisions must be made. Group B faces severe, potentially life-threatening danger and should be prioritized. Group A is in moderate danger and can likely wait. This follows standard disaster management protocols.",
+      "topic": "Decision Making",
+      "subject": "decision",
+      "difficulty": "medium"
+    },
+    {
+      "id": 18,
+      "question": "A company can choose between two strategies: Strategy X gives guaranteed ₹50,000 profit. Strategy Y has a 60% chance of ₹100,000 profit and 40% chance of ₹10,000 loss. Which is the better expected value?",
+      "options": {
+        "A": "Strategy X with ₹50,000 guaranteed",
+        "B": "Strategy Y with expected value of ₹56,000",
+        "C": "Both have equal expected value",
+        "D": "Cannot be determined"
+      },
+      "correctAnswer": "B",
+      "explanation": "Expected value of Strategy Y = (0.60 × ₹100,000) + (0.40 × (-₹10,000)) = ₹60,000 - ₹4,000 = ₹56,000. This is higher than Strategy X's guaranteed ₹50,000. However, the choice also depends on risk appetite. From a pure expected value perspective, Y is better.",
+      "topic": "Decision Making",
+      "subject": "decision",
+      "difficulty": "hard"
+    },
+    {
+      "id": 19,
+      "question": "In a village, there are reports of contaminated water supply. As a Block Development Officer, your first action should be:",
+      "options": {
+        "A": "File a report to higher authorities and wait for orders",
+        "B": "Arrange immediate alternative water supply and simultaneously investigate the contamination",
+        "C": "Call a village meeting to discuss the problem",
+        "D": "Ask villagers to boil water until further notice"
+      },
+      "correctAnswer": "B",
+      "explanation": "The most appropriate first action combines immediate relief (alternative water supply) with investigation. This dual approach addresses the emergency while working toward a permanent solution. Merely reporting or advising boiling water doesn't address the immediate health risk.",
+      "topic": "Decision Making",
+      "subject": "decision",
+      "difficulty": "medium"
+    },
+    {
+      "id": 20,
+      "question": "A manager has to choose between promoting Employee A (10 years experience, average performance) and Employee B (5 years experience, excellent performance). What criteria should primarily guide the decision?",
+      "options": {
+        "A": "Seniority should always be the deciding factor",
+        "B": "Performance and potential should be the primary criteria",
+        "C": "Both should be promoted simultaneously",
+        "D": "Neither should be promoted; hire externally"
+      },
+      "correctAnswer": "B",
+      "explanation": "Modern management principles emphasize merit-based decisions. While experience is valuable, performance and potential are more critical indicators of future success in a higher role. Promoting based solely on seniority can demotivate high performers and affect organizational efficiency.",
+      "topic": "Decision Making",
+      "subject": "decision",
+      "difficulty": "easy"
+    },
+    {
+      "id": 21,
+      "question": "Choose the word that is most similar in meaning to 'Ubiquitous':",
+      "options": {
+        "A": "Rare",
+        "B": "Omnipresent",
+        "C": "Unique",
+        "D": "Obscure"
+      },
+      "correctAnswer": "B",
+      "explanation": "'Ubiquitous' means present, appearing, or found everywhere. 'Omnipresent' is its closest synonym, meaning present everywhere at the same time. Both words convey the idea of being widespread or existing everywhere.",
+      "topic": "English Comprehension",
+      "subject": "english",
+      "difficulty": "easy"
+    },
+    {
+      "id": 22,
+      "question": "Choose the correct sentence:",
+      "options": {
+        "A": "Neither the students nor the teacher were present.",
+        "B": "Neither the students nor the teacher was present.",
+        "C": "Neither the students nor the teacher are present.",
+        "D": "Neither the students nor the teacher have been present."
+      },
+      "correctAnswer": "B",
+      "explanation": "In 'neither...nor' constructions, the verb agrees with the noun closest to it. Here, 'teacher' (singular) is closest to the verb, so the singular verb 'was' is correct. This is the rule of proximity in subject-verb agreement.",
+      "topic": "English Comprehension",
+      "subject": "english",
+      "difficulty": "medium"
+    },
+    {
+      "id": 23,
+      "question": "Identify the figure of speech in: \"The wind howled through the trees.\"",
+      "options": {
+        "A": "Simile",
+        "B": "Metaphor",
+        "C": "Personification",
+        "D": "Hyperbole"
+      },
+      "correctAnswer": "C",
+      "explanation": "Personification gives human qualities to non-human things. 'Howled' is a human/animal action attributed to the wind, making it personification. A simile uses 'like/as', a metaphor makes a direct comparison, and hyperbole is exaggeration.",
+      "topic": "English Comprehension",
+      "subject": "english",
+      "difficulty": "easy"
+    },
+    {
+      "id": 24,
+      "question": "Select the word that is the ANTONYM of 'Benevolent':",
+      "options": {
+        "A": "Generous",
+        "B": "Kind",
+        "C": "Malevolent",
+        "D": "Charitable"
+      },
+      "correctAnswer": "C",
+      "explanation": "'Benevolent' means well-meaning, kind, and generous. Its antonym is 'Malevolent', which means having or showing a wish to do evil to others. The prefix 'bene-' means good/well, while 'male-' means bad/evil.",
+      "topic": "English Comprehension",
+      "subject": "english",
+      "difficulty": "easy"
+    },
+    {
+      "id": 25,
+      "question": "Rearrange the following sentences to form a coherent paragraph:\nP: However, it requires consistent practice.\nQ: Reading is fundamental to learning.\nR: Without regular reading, retention decreases significantly.\nS: It enhances vocabulary and comprehension skills.",
+      "options": {
+        "A": "Q-S-P-R",
+        "B": "Q-P-S-R",
+        "C": "S-Q-R-P",
+        "D": "P-Q-R-S"
+      },
+      "correctAnswer": "A",
+      "explanation": "The logical order is: Q (main topic - reading is fundamental) → S (supporting detail - enhances skills) → P (contrasting point - requires practice) → R (consequence - retention decreases without it). This creates a coherent flow from statement to support to caveat to conclusion.",
+      "topic": "English Comprehension",
+      "subject": "english",
+      "difficulty": "medium"
+    }
+  ]
+}
