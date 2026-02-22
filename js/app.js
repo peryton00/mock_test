@@ -248,6 +248,9 @@ const App = (function ($) {
             Timer.start();
             _isExamActive = true;
 
+            // Activate Exam Guard
+            activateExamGuard();
+
             hideLoading();
             showScreen('screen-exam');
         }, 400);
@@ -291,6 +294,9 @@ const App = (function ($) {
             initExamScreen();
             Timer.start();
             _isExamActive = true;
+
+            // Activate Exam Guard
+            activateExamGuard();
 
             hideLoading();
             showScreen('screen-exam');
@@ -434,6 +440,9 @@ const App = (function ($) {
         _isExamActive = false;
         Timer.stop();
 
+        // Deactivate Exam Guard
+        deactivateExamGuard();
+
         // Calculate and store result
         const resultData = TestEngine.getResultData();
         const result = ResultEngine.calculate(resultData);
@@ -463,6 +472,9 @@ const App = (function ($) {
         $('#modal-submit').fadeOut(150);
         _isExamActive = false;
         Timer.stop();
+
+        // Deactivate Exam Guard
+        deactivateExamGuard();
 
         // Calculate result
         const resultData = TestEngine.getResultData();
@@ -529,7 +541,7 @@ const App = (function ($) {
 
         topicBreakdown.forEach(topic => {
             const barColor = topic.accuracy >= 60 ? '#059669' :
-                            topic.accuracy >= 35 ? '#d97706' : '#dc2626';
+                topic.accuracy >= 35 ? '#d97706' : '#dc2626';
 
             const $row = $(`
                 <tr>
@@ -590,9 +602,9 @@ const App = (function ($) {
             const qNumber = originalIdx + 1;
 
             const statusClass = q.status === 'correct' ? 'correct' :
-                               q.status === 'incorrect' ? 'incorrect' : 'unattempted';
+                q.status === 'incorrect' ? 'incorrect' : 'unattempted';
             const statusText = q.status === 'correct' ? '✓ Correct' :
-                              q.status === 'incorrect' ? '✗ Incorrect' : '— Skipped';
+                q.status === 'incorrect' ? '✗ Incorrect' : '— Skipped';
 
             let optionsHTML = '';
             ['A', 'B', 'C', 'D'].forEach(key => {
@@ -727,6 +739,80 @@ const App = (function ($) {
         const isDark = $('body').toggleClass('dark-mode').hasClass('dark-mode');
         StorageManager.saveDarkMode(isDark);
         $('#btn-dark-toggle i').toggleClass('fa-moon fa-sun');
+    }
+
+    // =============================================
+    // EXAM GUARD INTEGRATION
+    // =============================================
+
+    /**
+     * Activate the ExamGuard security lockdown
+     */
+    function activateExamGuard() {
+        if (typeof ExamGuard === 'undefined') return;
+
+        // Reset violation badge
+        $('#violation-count').text('0');
+        $('#violation-badge').hide();
+
+        ExamGuard.activate({
+            maxViolations: 5,
+            onViolation: function (count, reason, max) {
+                // Update badge
+                $('#violation-badge').show();
+                $('#violation-count').text(count);
+
+                // Update modal
+                $('#violation-reason').text(reason);
+                $('#violation-modal-count').text(count);
+                $('#violation-modal-max').text(max);
+                $('#violation-progress-fill').css('width', ((count / max) * 100) + '%');
+
+                // Update warning text based on remaining violations
+                const remaining = max - count;
+                if (remaining <= 1) {
+                    $('#violation-warning-text').html(
+                        '🚨 <strong>FINAL WARNING!</strong> One more violation and your test will be auto-submitted.'
+                    );
+                } else {
+                    $('#violation-warning-text').html(
+                        '⚠️ Your test will be <strong>auto-submitted</strong> after reaching maximum violations. (' + remaining + ' remaining)'
+                    );
+                }
+
+                // Show violation modal
+                $('#modal-violation').fadeIn(200);
+            },
+            onAutoSubmit: function () {
+                // Hide violation modal if showing
+                $('#modal-violation').hide();
+
+                // Show auto-submit modal
+                $('#modal-autosubmit').fadeIn(200);
+
+                // Actually submit the test
+                _isExamActive = false;
+                Timer.stop();
+                deactivateExamGuard();
+
+                const resultData = TestEngine.getResultData();
+                const result = ResultEngine.calculate(resultData);
+                StorageManager.addToHistory(result);
+                StorageManager.clearSession();
+                TestEngine.reset();
+
+                // Store result for viewing after modal
+                ResultEngine.setResult(result);
+            }
+        });
+    }
+
+    /**
+     * Deactivate the ExamGuard security lockdown
+     */
+    function deactivateExamGuard() {
+        if (typeof ExamGuard === 'undefined') return;
+        ExamGuard.deactivate();
     }
 
     // =============================================
@@ -900,18 +986,42 @@ const App = (function ($) {
             showScreen('screen-home');
         });
         $('#btn-clear-history').on('click', function () {
-            if (confirm('Are you sure you want to clear all attempt history?')) {
+            if (confirm('Are you sure you want to clear all test history?')) {
                 StorageManager.clearHistory();
                 renderHistoryScreen();
             }
         });
 
-        // History view/review buttons (event delegation)
+        // History card actions (event delegation)
         $('#history-list').on('click', '.history-view-btn', function () {
             viewHistoryResult($(this).data('history-id'));
         });
         $('#history-list').on('click', '.history-review-btn', function () {
             reviewHistoryItem($(this).data('history-id'));
+        });
+
+        // --- EXAM GUARD MODALS ---
+
+        // Violation warning OK button
+        $('#btn-violation-ok').on('click', function () {
+            $('#modal-violation').fadeOut(150);
+            // Re-enter fullscreen after violation
+            if (typeof ExamGuard !== 'undefined' && ExamGuard.isActive()) {
+                ExamGuard.reEnterFullscreen();
+            }
+        });
+
+        // Auto-submit OK button
+        $('#btn-autosubmit-ok').on('click', function () {
+            $('#modal-autosubmit').fadeOut(150);
+            const result = ResultEngine.getLastResult();
+            if (result) {
+                renderResultScreen(result);
+                showScreen('screen-result');
+            } else {
+                initHomeScreen();
+                showScreen('screen-home');
+            }
         });
 
         // --- KEYBOARD SHORTCUTS ---
