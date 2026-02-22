@@ -45,6 +45,12 @@
       "subjectName": "Environment & Ecology",
       "icon": "🌿",
       "questionCount": 40
+    },
+    {
+      "subjectId": "currentaffairs",
+      "subjectName": "Current Affairs (2025-2026)",
+      "icon": "📰",
+      "questionCount": 40
     }
   ],
   "tests": {
@@ -67,9 +73,6 @@
         12,
         13,
         14,
-        15,
-        16,
-        17,
         41,
         42,
         43,
@@ -85,8 +88,6 @@
         53,
         54,
         55,
-        56,
-        57,
         81,
         82,
         83,
@@ -102,8 +103,6 @@
         93,
         94,
         95,
-        96,
-        97,
         121,
         122,
         123,
@@ -118,9 +117,6 @@
         132,
         133,
         134,
-        135,
-        136,
-        137,
         161,
         162,
         163,
@@ -135,8 +131,6 @@
         172,
         173,
         174,
-        175,
-        176,
         201,
         202,
         203,
@@ -151,8 +145,20 @@
         212,
         213,
         214,
-        215,
-        216
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254
       ]
     },
     "polity": {
@@ -435,6 +441,53 @@
         238,
         239,
         240
+      ]
+    },
+    "currentaffairs": {
+      "testId": "GS_CA_001",
+      "testName": "Subject Test - Current Affairs (2025-2026)",
+      "durationMinutes": 48,
+      "questionIds": [
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280
       ]
     }
   },
@@ -4038,6 +4091,606 @@
       "topic": "Environment",
       "difficulty": "easy",
       "subject": "environment"
+    },
+    {
+      "id": 241,
+      "question": "Which Indian space mission successfully soft-landed on the Moon's south polar region in August 2023, making India the 4th country to achieve a lunar landing?",
+      "options": {
+        "A": "Chandrayaan-2",
+        "B": "Chandrayaan-3",
+        "C": "Gaganyaan",
+        "D": "Aditya-L1"
+      },
+      "correctAnswer": "B",
+      "explanation": "Chandrayaan-3 successfully soft-landed on the Moon's south polar region on August 23, 2023. The Vikram lander and Pragyan rover made India the first country to land near the lunar south pole and the 4th country overall to achieve a soft landing on the Moon.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 242,
+      "question": "India's first solar observation mission 'Aditya-L1' was placed at which Lagrangian point?",
+      "options": {
+        "A": "L2",
+        "B": "L3",
+        "C": "L1",
+        "D": "L4"
+      },
+      "correctAnswer": "C",
+      "explanation": "Aditya-L1, launched in September 2023, was successfully placed at the Sun-Earth Lagrangian Point 1 (L1) in January 2024. This point is about 1.5 million km from Earth and allows continuous observation of the Sun without eclipses.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 243,
+      "question": "The 18th G20 Summit held in September 2023 was hosted by India in which city?",
+      "options": {
+        "A": "Mumbai",
+        "B": "Bengaluru",
+        "C": "New Delhi",
+        "D": "Hyderabad"
+      },
+      "correctAnswer": "C",
+      "explanation": "The 18th G20 Leaders' Summit was held at Bharat Mandapam, Pragati Maidan, New Delhi on September 9-10, 2023. India's presidency theme was 'One Earth, One Family, One Future' (Vasudhaiva Kutumbakam). The African Union was admitted as a permanent member during this summit.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 244,
+      "question": "Which organization was admitted as a permanent member of the G20 during India's presidency in 2023?",
+      "options": {
+        "A": "ASEAN",
+        "B": "African Union",
+        "C": "SAARC",
+        "D": "Arab League"
+      },
+      "correctAnswer": "B",
+      "explanation": "The African Union (AU) was admitted as a permanent member of the G20 during India's presidency at the New Delhi Summit in September 2023, making the G20 now G21 effectively. This was a landmark achievement of India's G20 presidency.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 245,
+      "question": "The 'Nari Shakti Vandan Adhiniyam' (Women's Reservation Act) passed in 2023 reserves what percentage of seats in Lok Sabha and State Assemblies for women?",
+      "options": {
+        "A": "25%",
+        "B": "33%",
+        "C": "40%",
+        "D": "50%"
+      },
+      "correctAnswer": "B",
+      "explanation": "The Constitution (106th Amendment) Act, 2023, also called the Nari Shakti Vandan Adhiniyam, provides for one-third (33%) reservation for women in Lok Sabha and State Legislative Assemblies. It will be implemented after delimitation based on the first Census conducted after the Act's commencement.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 246,
+      "question": "The Digital Personal Data Protection Act (DPDP Act) was enacted in India in which year?",
+      "options": {
+        "A": "2022",
+        "B": "2023",
+        "C": "2024",
+        "D": "2021"
+      },
+      "correctAnswer": "B",
+      "explanation": "The Digital Personal Data Protection Act was passed by Parliament and received Presidential assent in August 2023. It establishes a framework for processing digital personal data, rights of data principals, and duties of data fiduciaries, with the Data Protection Board of India as the enforcement body.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 247,
+      "question": "Which country did NOT join BRICS as a new member from January 1, 2024?",
+      "options": {
+        "A": "Egypt",
+        "B": "Iran",
+        "C": "Turkey",
+        "D": "Ethiopia"
+      },
+      "correctAnswer": "C",
+      "explanation": "At the 15th BRICS Summit in Johannesburg (2023), six nations were invited to join: Egypt, Ethiopia, Iran, Saudi Arabia, and the UAE (all joining from January 1, 2024). Turkey was NOT among the new BRICS members. Argentina declined to join after a change in government.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 248,
+      "question": "The India-Middle East-Europe Economic Corridor (IMEC) was announced at which international summit in 2023?",
+      "options": {
+        "A": "BRICS Summit",
+        "B": "G7 Summit",
+        "C": "G20 Summit",
+        "D": "ASEAN Summit"
+      },
+      "correctAnswer": "C",
+      "explanation": "The India-Middle East-Europe Economic Corridor (IMEC) was announced at the G20 Summit in New Delhi in September 2023. It is a planned rail and shipping corridor linking India, the Middle East (UAE, Saudi Arabia, Jordan, Israel), and Europe, as an alternative to China's Belt and Road Initiative.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 249,
+      "question": "The new Parliament building of India, inaugurated in May 2023, is known as:",
+      "options": {
+        "A": "Sansad Bhavan",
+        "B": "Lok Bhavan",
+        "C": "Jan Bhavan",
+        "D": "Bharat Bhavan"
+      },
+      "correctAnswer": "A",
+      "explanation": "The new Parliament building, inaugurated on May 28, 2023, is officially known as 'Sansad Bhavan'. Built as part of the Central Vista Redevelopment Project, it has a triangular shape, is built on 64,500 sq meters, and features the Sengol (a historical sceptre) installed near the Speaker's chair.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 250,
+      "question": "The Citizenship Amendment Act (CAA) Rules were notified, operationalizing the CAA 2019, in which month and year?",
+      "options": {
+        "A": "January 2024",
+        "B": "March 2024",
+        "C": "December 2023",
+        "D": "June 2024"
+      },
+      "correctAnswer": "B",
+      "explanation": "The CAA Rules were notified on March 11, 2024, operationalizing the Citizenship Amendment Act, 2019. The Act provides an expedited pathway to Indian citizenship for persecuted Hindu, Sikh, Buddhist, Jain, Parsi, and Christian minorities from Pakistan, Bangladesh, and Afghanistan.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 251,
+      "question": "Which scheme launched in February 2024 aims to provide free electricity up to 300 units per month through rooftop solar installations?",
+      "options": {
+        "A": "PM Kusum Yojana",
+        "B": "PM Surya Ghar Muft Bijli Yojana",
+        "C": "National Solar Mission",
+        "D": "Green Energy Corridor"
+      },
+      "correctAnswer": "B",
+      "explanation": "PM Surya Ghar Muft Bijli Yojana was launched in February 2024 with a budget of ₹75,021 crore. It aims to install rooftop solar panels on 1 crore households, providing up to 300 units of free electricity per month and promoting renewable energy adoption.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 252,
+      "question": "The Unified Pension Scheme (UPS) announced in August 2024 guarantees what percentage of average basic pay as pension for government employees with 25 years of service?",
+      "options": {
+        "A": "40%",
+        "B": "50%",
+        "C": "60%",
+        "D": "75%"
+      },
+      "correctAnswer": "B",
+      "explanation": "The Unified Pension Scheme (UPS), approved by the Union Cabinet in August 2024, guarantees 50% of the average basic pay drawn during the last 12 months as pension for employees completing minimum 25 years of service. It also provides family pension, minimum pension guarantee, and inflation indexation.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 253,
+      "question": "Which Indian athlete won Gold in the Men's Javelin Throw at the 2023 World Athletics Championships?",
+      "options": {
+        "A": "Neeraj Chopra",
+        "B": "DP Manu",
+        "C": "Kishore Jena",
+        "D": "Rohit Yadav"
+      },
+      "correctAnswer": "A",
+      "explanation": "Neeraj Chopra won gold at the 2023 World Athletics Championships held in Budapest, Hungary, with a throw of 88.17m. This made him only the third athlete in history to hold both the Olympic and World Championship titles simultaneously in javelin throw.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 254,
+      "question": "The Supreme Court of India declared the Electoral Bonds Scheme unconstitutional in February 2024 primarily on the grounds of violation of:",
+      "options": {
+        "A": "Right to Equality (Article 14)",
+        "B": "Right to Information (Article 19(1)(a))",
+        "C": "Right to Life (Article 21)",
+        "D": "Freedom of Religion (Article 25)"
+      },
+      "correctAnswer": "B",
+      "explanation": "In February 2024, the Supreme Court struck down the Electoral Bonds Scheme as unconstitutional, holding that it violated citizens' Right to Information under Article 19(1)(a). The Court directed the SBI to disclose all bond details to the Election Commission for public disclosure.",
+      "topic": "Current Affairs",
+      "difficulty": "hard",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 255,
+      "question": "Which was the theme of India's G20 Presidency in 2023?",
+      "options": {
+        "A": "Recover Together, Recover Stronger",
+        "B": "One Earth, One Family, One Future",
+        "C": "Building Consensus for Fair Development",
+        "D": "Shaping an Interconnected World"
+      },
+      "correctAnswer": "B",
+      "explanation": "India's G20 Presidency theme was 'One Earth, One Family, One Future' derived from the ancient Sanskrit phrase 'Vasudhaiva Kutumbakam' meaning 'The World is One Family'. The logo featured Earth integrated with the lotus, India's national flower.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 256,
+      "question": "COP28, the UN Climate Change Conference held in late 2023, was hosted in which city?",
+      "options": {
+        "A": "Sharm El-Sheikh",
+        "B": "Glasgow",
+        "C": "Dubai",
+        "D": "Baku"
+      },
+      "correctAnswer": "C",
+      "explanation": "COP28 was held in Dubai, UAE from November 30 to December 13, 2023. It featured the first-ever Global Stocktake and a historic agreement calling for 'transitioning away from fossil fuels' in energy systems. COP29 was subsequently held in Baku, Azerbaijan in 2024.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 257,
+      "question": "The PM Vishwakarma Scheme launched in September 2023 provides support to artisans and craftspeople. What is the maximum collateral-free loan amount provided under this scheme?",
+      "options": {
+        "A": "₹1 lakh",
+        "B": "₹2 lakh",
+        "C": "₹3 lakh",
+        "D": "₹5 lakh"
+      },
+      "correctAnswer": "C",
+      "explanation": "PM Vishwakarma Scheme provides collateral-free enterprise development loans of up to ₹3 lakh (₹1 lakh in 1st tranche and ₹2 lakh in 2nd tranche) at a concessional interest rate of 5%. It covers 18 traditional trades including carpentry, blacksmithing, pottery, and tailoring.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 258,
+      "question": "Which of the following Bharat Ratna awardees was honored posthumously in 2024 for his contribution to agriculture and food security?",
+      "options": {
+        "A": "L.K. Advani",
+        "B": "P.V. Narasimha Rao",
+        "C": "M.S. Swaminathan",
+        "D": "Karpoori Thakur"
+      },
+      "correctAnswer": "C",
+      "explanation": "M.S. Swaminathan, known as the 'Father of India's Green Revolution', was posthumously awarded the Bharat Ratna in 2024. In the same year, Bharat Ratna was also conferred on P.V. Narasimha Rao, Chaudhary Charan Singh, Karpoori Thakur (all posthumous), and L.K. Advani.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 259,
+      "question": "The Ram Mandir in Ayodhya was consecrated (Pran Pratishtha) in January 2024. The temple is being constructed by which trust?",
+      "options": {
+        "A": "Vishva Hindu Parishad",
+        "B": "Shri Ram Janmabhoomi Teerth Kshetra Trust",
+        "C": "RSS Trust",
+        "D": "Ayodhya Development Authority"
+      },
+      "correctAnswer": "B",
+      "explanation": "The Shri Ram Janmabhoomi Teerth Kshetra Trust, formed as per the Supreme Court's November 2019 verdict, oversaw the construction of the Ram Mandir. The Pran Pratishtha ceremony was held on January 22, 2024. The temple is built in the Nagara style of architecture.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 260,
+      "question": "India's first semiconductor fabrication facility announced in 2024 is being set up by which company in Gujarat?",
+      "options": {
+        "A": "Intel",
+        "B": "TSMC",
+        "C": "Micron Technology",
+        "D": "Samsung"
+      },
+      "correctAnswer": "C",
+      "explanation": "Micron Technology announced setting up India's first semiconductor assembly and testing facility in Sanand, Gujarat, with an investment of $2.75 billion. The Indian government approved incentives of up to 50% of the project cost under the India Semiconductor Mission.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 261,
+      "question": "The 'Lakhpati Didi' initiative aims to create how many women earning more than ₹1 lakh per annum from Self Help Groups?",
+      "options": {
+        "A": "1 crore",
+        "B": "2 crore",
+        "C": "3 crore",
+        "D": "5 crore"
+      },
+      "correctAnswer": "C",
+      "explanation": "The Lakhpati Didi initiative, announced in the 2023-24 Budget and expanded in the 2024-25 Budget, aims to empower 3 crore women in Self Help Groups (SHGs) to become 'Lakhpati Didis' — women earning more than ₹1 lakh annually through skill development and micro-enterprises.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 262,
+      "question": "Which country hosted COP29 (UN Climate Change Conference) in November 2024?",
+      "options": {
+        "A": "Brazil",
+        "B": "Azerbaijan",
+        "C": "UAE",
+        "D": "South Africa"
+      },
+      "correctAnswer": "B",
+      "explanation": "COP29 was held in Baku, Azerbaijan in November 2024. A key outcome was the agreement on New Collective Quantified Goal (NCQG) for climate finance, targeting at least $300 billion annually by 2035 for developing countries. COP30 is scheduled for Belém, Brazil in 2025.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 263,
+      "question": "India's UPI (Unified Payments Interface) has been expanded internationally. Which of the following countries was among the first to adopt UPI-based payments?",
+      "options": {
+        "A": "Germany",
+        "B": "Singapore",
+        "C": "USA",
+        "D": "Japan"
+      },
+      "correctAnswer": "B",
+      "explanation": "Singapore was among the first countries to link with India's UPI system through the UPI-PayNow linkage launched in February 2023. Subsequently, UPI was also extended to Sri Lanka, Mauritius, France, and the UAE, promoting India's digital public infrastructure globally.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 264,
+      "question": "The National Green Hydrogen Mission, approved in January 2023, aims to achieve a green hydrogen production capacity of how many million metric tonnes per annum by 2030?",
+      "options": {
+        "A": "2 MMT",
+        "B": "5 MMT",
+        "C": "8 MMT",
+        "D": "10 MMT"
+      },
+      "correctAnswer": "B",
+      "explanation": "The National Green Hydrogen Mission targets producing 5 million metric tonnes per annum (MMTPA) of green hydrogen by 2030 with an initial budget outlay of ₹19,744 crore. It aims to make India a global hub for green hydrogen production and usage.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 265,
+      "question": "The 'One Nation One Election' proposal was examined by a high-level committee chaired by:",
+      "options": {
+        "A": "Justice D.Y. Chandrachud",
+        "B": "Ram Nath Kovind",
+        "C": "Nripendra Misra",
+        "D": "Justice Ranjan Gogoi"
+      },
+      "correctAnswer": "B",
+      "explanation": "The High-Level Committee on One Nation One Election was chaired by former President Ram Nath Kovind. It submitted its report in March 2024 recommending simultaneous elections for Lok Sabha and State Assemblies in the first phase, followed by local body elections within 100 days.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 266,
+      "question": "Which Indian Navy warship, built indigenously, is India's first aircraft carrier designed and built in India?",
+      "options": {
+        "A": "INS Vikramaditya",
+        "B": "INS Vikrant",
+        "C": "INS Vishal",
+        "D": "INS Viraat"
+      },
+      "correctAnswer": "B",
+      "explanation": "INS Vikrant (IAC-1), commissioned in September 2022, is India's first indigenously designed and built aircraft carrier. Built by Cochin Shipyard Limited, it has a displacement of about 45,000 tonnes and can carry 30 aircraft including MiG-29K fighters and helicopters.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 267,
+      "question": "The Pradhan Mantri Janjatiya Unnat Gram Abhiyan launched in 2024 aims to benefit tribal communities in approximately how many villages?",
+      "options": {
+        "A": "25,000 villages",
+        "B": "36,000 villages",
+        "C": "63,000 villages",
+        "D": "78,000 villages"
+      },
+      "correctAnswer": "C",
+      "explanation": "The Pradhan Mantri Janjatiya Unnat Gram Abhiyan, launched in October 2024, aims to bring comprehensive development to over 63,000 tribal-majority villages covering approximately 5 crore tribal people across 549 districts in 30 states and UTs.",
+      "topic": "Current Affairs",
+      "difficulty": "hard",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 268,
+      "question": "Which Indian city hosted the joint NASA-ISRO satellite 'NISAR' ground station for the earth observation mission launched in 2024?",
+      "options": {
+        "A": "Bengaluru",
+        "B": "Ahmedabad",
+        "C": "Sriharikota",
+        "D": "Thiruvananthapuram"
+      },
+      "correctAnswer": "A",
+      "explanation": "NISAR (NASA-ISRO Synthetic Aperture Radar) is a joint Earth observation satellite. ISRO's ground station at the Indian Deep Space Network in Bengaluru (Byalalu) serves as a key tracking and data reception facility. The satellite maps the entire Earth every 12 days.",
+      "topic": "Current Affairs",
+      "difficulty": "hard",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 269,
+      "question": "The Agniveer scheme (Agnipath) for recruitment in Indian Armed Forces was launched in which year?",
+      "options": {
+        "A": "2020",
+        "B": "2021",
+        "C": "2022",
+        "D": "2023"
+      },
+      "correctAnswer": "C",
+      "explanation": "The Agnipath scheme was launched on June 14, 2022, for recruitment of soldiers (Agniveers) into the Indian Armed Forces for a four-year tenure. Up to 25% of Agniveers can be retained permanently based on merit and organizational requirements.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 270,
+      "question": "India's total installed renewable energy capacity crossed which milestone in 2024, making it the 4th largest globally?",
+      "options": {
+        "A": "100 GW",
+        "B": "150 GW",
+        "C": "200 GW",
+        "D": "250 GW"
+      },
+      "correctAnswer": "C",
+      "explanation": "India's total installed renewable energy capacity (including large hydro) crossed 200 GW in 2024. India committed to achieving 500 GW of non-fossil fuel energy capacity by 2030 and net-zero emissions by 2070 at COP26.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 271,
+      "question": "The 2024 Paris Olympic Games saw India win a total of how many medals?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "correctAnswer": "C",
+      "explanation": "India won 6 medals at the 2024 Paris Olympics: 1 Silver (Neeraj Chopra in Javelin) and 5 Bronze medals (including Manu Bhaker who won 2 bronze medals in shooting, Swapnil Kusale in shooting, Aman Sehrawat in wrestling, and the Hockey team).",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 272,
+      "question": "Which Indian shooter created history at the 2024 Paris Olympics by winning two individual medals in a single edition?",
+      "options": {
+        "A": "Saurabh Chaudhary",
+        "B": "Manu Bhaker",
+        "C": "Swapnil Kusale",
+        "D": "Abhinav Bindra"
+      },
+      "correctAnswer": "B",
+      "explanation": "Manu Bhaker became the first Indian since independence to win two medals in a single Olympic edition. She won bronze in Women's 10m Air Pistol and another bronze in 10m Air Pistol Mixed Team event (with Sarabjot Singh) at the 2024 Paris Olympics.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 273,
+      "question": "The Ayushman Bharat PM-JAY scheme was expanded in 2024 to cover which additional category of beneficiaries?",
+      "options": {
+        "A": "BPL families",
+        "B": "All citizens above 70 years of age",
+        "C": "Government employees",
+        "D": "Students"
+      },
+      "correctAnswer": "B",
+      "explanation": "In September 2024, the government expanded Ayushman Bharat PM-JAY to provide free health insurance cover of ₹5 lakh per family per year to all citizens aged 70 years and above, regardless of income. This expansion benefits an additional 6 crore senior citizens.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 274,
+      "question": "India's Gaganyaan mission is India's first:",
+      "options": {
+        "A": "Mars orbiter mission",
+        "B": "Human spaceflight mission",
+        "C": "Reusable launch vehicle mission",
+        "D": "Deep space mission"
+      },
+      "correctAnswer": "B",
+      "explanation": "Gaganyaan is India's first human spaceflight program being developed by ISRO. The mission aims to send Indian astronauts (Gaganauts) to a Low Earth Orbit (LEO) of 400 km for a 3-day mission. Uncrewed test flights were conducted as precursors before the crewed mission.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 275,
+      "question": "The 'Critical Minerals' list of India identifies how many minerals essential for clean energy and advanced technology?",
+      "options": {
+        "A": "15",
+        "B": "24",
+        "C": "30",
+        "D": "50"
+      },
+      "correctAnswer": "C",
+      "explanation": "India's Ministry of Mines published a list of 30 critical minerals in 2023, including lithium, cobalt, titanium, rare earth elements, and graphite. These minerals are essential for clean energy transition, electronics, defense, and emerging technologies, and India depends heavily on imports for most of them.",
+      "topic": "Current Affairs",
+      "difficulty": "hard",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 276,
+      "question": "Which Indian state became the first to implement the Uniform Civil Code (UCC) by enacting the Uttarakhand Uniform Civil Code Act in 2024?",
+      "options": {
+        "A": "Gujarat",
+        "B": "Madhya Pradesh",
+        "C": "Uttarakhand",
+        "D": "Himachal Pradesh"
+      },
+      "correctAnswer": "C",
+      "explanation": "Uttarakhand became the first state in India to pass a Uniform Civil Code Act in February 2024, which was given presidential assent and subsequently notified. The Act provides uniform laws for marriage, divorce, succession, and related matters for all citizens of the state, barring Scheduled Tribes.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 277,
+      "question": "India's GDP growth rate for the financial year 2024-25 was estimated at approximately:",
+      "options": {
+        "A": "5.5%",
+        "B": "6.4%",
+        "C": "7.5%",
+        "D": "8.2%"
+      },
+      "correctAnswer": "B",
+      "explanation": "India's GDP growth rate for FY 2024-25 was estimated at approximately 6.4% in the first advance estimates released by the NSO. While this was lower than the 8.2% growth in FY 2023-24, India remained one of the fastest-growing major economies in the world.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 278,
+      "question": "The Union Budget 2025-26 raised the income tax exemption limit for individuals under the new tax regime to:",
+      "options": {
+        "A": "₹7 lakh",
+        "B": "₹10 lakh",
+        "C": "₹12 lakh",
+        "D": "₹15 lakh"
+      },
+      "correctAnswer": "C",
+      "explanation": "In the Union Budget 2025-26, Finance Minister Nirmala Sitharaman announced that individuals earning up to ₹12 lakh per annum (₹12.75 lakh for salaried persons including standard deduction) would pay zero income tax under the new tax regime, providing significant relief to the middle class.",
+      "topic": "Current Affairs",
+      "difficulty": "easy",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 279,
+      "question": "The 'IndiaAI Mission' approved in 2024 with a budget of over ₹10,000 crore aims to:",
+      "options": {
+        "A": "Build India's own social media platforms",
+        "B": "Strengthen AI ecosystem including compute capacity, innovation, and skilling",
+        "C": "Replace all government employees with AI systems",
+        "D": "Ban foreign AI companies from operating in India"
+      },
+      "correctAnswer": "B",
+      "explanation": "The IndiaAI Mission, approved in March 2024 with a budget of ₹10,372 crore, aims to establish a comprehensive AI ecosystem. It includes building compute infrastructure (10,000+ GPU capacity), funding AI startups, creating datasets, developing application solutions, and skilling programs.",
+      "topic": "Current Affairs",
+      "difficulty": "medium",
+      "subject": "currentaffairs"
+    },
+    {
+      "id": 280,
+      "question": "The Telecommunications Act, 2023 replaced which colonial-era legislation that had governed India's telecom sector?",
+      "options": {
+        "A": "Indian Telegraph Act, 1885",
+        "B": "Indian Wireless Telegraphy Act, 1933",
+        "C": "Both A and B",
+        "D": "Information Technology Act, 2000"
+      },
+      "correctAnswer": "C",
+      "explanation": "The Telecommunications Act, 2023 replaced three colonial-era laws: the Indian Telegraph Act (1885), the Indian Wireless Telegraphy Act (1933), and the Telegraph Wires (Unlawful Possession) Act (1950). It modernizes India's telecom regulatory framework covering spectrum management, licensing, and digital services.",
+      "topic": "Current Affairs",
+      "difficulty": "hard",
+      "subject": "currentaffairs"
     }
   ]
 }
